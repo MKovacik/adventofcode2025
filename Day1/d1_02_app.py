@@ -15,12 +15,15 @@ def simulate(rotations, start=50, modulo=100):
     zero_hits = 0
 
     for direction, distance in rotations:
-        step = -1 if direction == "L" else 1 if direction == "R" else None
-        if step is None:
+        if direction == "L":
+            delta = -1
+        elif direction == "R":
+            delta = 1
+        else:
             raise ValueError(f"Unknown direction: {direction}")
 
         for _ in range(distance):
-            position = (position + step) % modulo
+            position = (position + delta) % modulo
             if position == 0:
                 zero_hits += 1
 
