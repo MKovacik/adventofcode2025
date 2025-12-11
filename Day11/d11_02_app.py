@@ -18,7 +18,6 @@ def parse_input(input_text):
 
 
 def count_paths_through_both(graph, start, end, required1, required2):
-    """Count paths from start to end that visit both required1 and required2."""
     
     @lru_cache(maxsize=None)
     def dfs(node, visited_req1, visited_req2):
