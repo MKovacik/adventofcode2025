@@ -69,7 +69,7 @@ def solve(input_text):
 
 
 if __name__ == "__main__":
-    with open("D10_01_input.txt", "r") as f:
+    with open("D10_02_input.txt", "r") as f:
         input_text = f.read()
     
     solve(input_text)
